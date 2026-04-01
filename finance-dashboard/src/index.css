@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes blobFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -18px, 0) scale(1.05);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes blobDrift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(16px, -12px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animated-gradient-bg {
+  background-size: 200% 200%;
+  animation: gradientShift 14s ease infinite;
+}
+
+.blob {
+  animation: blobFloat 14s ease-in-out infinite;
+  will-change: transform;
+}
+
+.blob-drift {
+  animation: blobDrift 18s ease-in-out infinite;
+  will-change: transform;
+}
+
+.particle-layer {
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 220px 220px, 280px 280px, 320px 320px;
+  opacity: 0.22;
+  animation: gradientShift 15s linear infinite;
+}
