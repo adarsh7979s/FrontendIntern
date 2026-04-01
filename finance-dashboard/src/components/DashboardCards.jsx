@@ -27,7 +27,7 @@ function DashboardCards({ transactions, isDark }) {
   return (
     <div className="grid gap-4 md:grid-cols-3">
       <div
-        className={`rounded-xl border p-5 shadow-lg backdrop-blur-lg transition-all duration-300 hover:scale-[1.02] ${cardClass}`}
+        className={`rounded-xl border p-5 shadow-lg backdrop-blur-lg transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl ${cardClass}`}
       >
         <p className={`text-sm font-medium ${labelClass}`}>Total Balance</p>
         <p className={`mt-2 text-2xl font-bold ${balanceClass}`}>
@@ -36,7 +36,7 @@ function DashboardCards({ transactions, isDark }) {
       </div>
 
       <div
-        className={`rounded-xl border p-5 shadow-lg backdrop-blur-lg transition-all duration-300 hover:scale-[1.02] ${cardClass}`}
+        className={`rounded-xl border p-5 shadow-lg backdrop-blur-lg transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl ${cardClass}`}
       >
         <p className={`text-sm font-medium ${labelClass}`}>Total Income</p>
         <p className={`mt-2 text-2xl font-bold ${incomeClass}`}>
@@ -45,7 +45,7 @@ function DashboardCards({ transactions, isDark }) {
       </div>
 
       <div
-        className={`rounded-xl border p-5 shadow-lg backdrop-blur-lg transition-all duration-300 hover:scale-[1.02] ${cardClass}`}
+        className={`rounded-xl border p-5 shadow-lg backdrop-blur-lg transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl ${cardClass}`}
       >
         <p className={`text-sm font-medium ${labelClass}`}>Total Expenses</p>
         <p className={`mt-2 text-2xl font-bold ${expenseClass}`}>

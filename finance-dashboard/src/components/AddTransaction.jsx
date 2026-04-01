@@ -100,7 +100,7 @@ function AddTransaction({ onAddTransaction, isDark = true }) {
 
       <button
         type="submit"
-        className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-lg shadow-blue-500/20 transition-all duration-300 hover:scale-[1.02] hover:bg-blue-700 active:scale-[0.98]"
+        className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-lg shadow-blue-500/20 transition-all duration-300 ease-in-out hover:scale-[1.02] hover:bg-blue-700 hover:brightness-105 active:scale-95"
       >
         Add Transaction
       </button>
@@ -109,4 +109,3 @@ function AddTransaction({ onAddTransaction, isDark = true }) {
 }
 
 export default AddTransaction
-

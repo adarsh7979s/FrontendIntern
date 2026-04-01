@@ -73,7 +73,7 @@ function Charts({ transactions, isDark = true }) {
 
   return (
     <section
-      className={`rounded-xl border p-5 shadow-lg backdrop-blur-lg transition-all duration-300 hover:scale-[1.02] sm:p-6 ${sectionClass}`}
+      className={`rounded-xl border p-5 shadow-lg backdrop-blur-lg transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl sm:p-6 ${sectionClass}`}
     >
       <h2 className={`text-xl font-semibold ${headingClass}`}>Charts Section</h2>
       <p className={`mt-1 text-sm ${subtextClass}`}>

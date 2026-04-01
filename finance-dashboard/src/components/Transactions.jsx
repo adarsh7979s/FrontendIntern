@@ -68,7 +68,7 @@ function Transactions({ transactions, filter, setFilter, role, isDark, onAddTran
     : 'border-slate-200 bg-white shadow-slate-300/50'
   const headRowClass = isDark ? 'bg-white/10 text-slate-200' : 'bg-slate-50 text-slate-700'
   const bodyClass = isDark ? 'divide-white/10' : 'divide-slate-100'
-  const rowClass = isDark ? 'text-slate-100 hover:bg-white/5' : 'text-slate-700 hover:bg-slate-50'
+  const rowClass = isDark ? 'text-slate-100 hover:bg-white/10' : 'text-slate-700 hover:bg-slate-50'
   const incomeClass = isDark ? 'text-green-300' : 'text-green-700'
   const expenseClass = isDark ? 'text-red-300' : 'text-red-700'
 
@@ -79,7 +79,7 @@ function Transactions({ transactions, filter, setFilter, role, isDark, onAddTran
 
   return (
     <section
-      className={`rounded-xl border p-5 shadow-lg backdrop-blur-lg transition-all duration-300 hover:scale-[1.02] sm:p-6 ${sectionClass}`}
+      className={`rounded-xl border p-5 shadow-lg backdrop-blur-lg transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl sm:p-6 ${sectionClass}`}
     >
       <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
         <div>
@@ -100,7 +100,7 @@ function Transactions({ transactions, filter, setFilter, role, isDark, onAddTran
               id="transaction-filter"
               value={filter}
               onChange={(event) => setFilter(event.target.value)}
-              className={`rounded-lg border px-3 py-2 text-sm shadow-lg outline-none backdrop-blur-lg transition-all duration-300 ${selectClass}`}
+              className={`rounded-lg border px-3 py-2 text-sm shadow-lg outline-none backdrop-blur-lg transition-all duration-300 ease-in-out ${selectClass}`}
             >
               <option value="all" className={optionClass}>
                 All
@@ -122,7 +122,7 @@ function Transactions({ transactions, filter, setFilter, role, isDark, onAddTran
               id="transaction-sort"
               value={sortBy}
               onChange={(event) => setSortBy(event.target.value)}
-              className={`rounded-lg border px-3 py-2 text-sm shadow-lg outline-none backdrop-blur-lg transition-all duration-300 ${selectClass}`}
+              className={`rounded-lg border px-3 py-2 text-sm shadow-lg outline-none backdrop-blur-lg transition-all duration-300 ease-in-out ${selectClass}`}
             >
               <option value="date-desc" className={optionClass}>
                 Latest
@@ -149,7 +149,7 @@ function Transactions({ transactions, filter, setFilter, role, isDark, onAddTran
               value={searchQuery}
               onChange={(event) => setSearchQuery(event.target.value)}
               placeholder="Category or type"
-              className={`w-full rounded-lg border px-3 py-2 text-sm shadow-lg outline-none backdrop-blur-lg transition-all duration-300 ${selectClass}`}
+              className={`w-full rounded-lg border px-3 py-2 text-sm shadow-lg outline-none backdrop-blur-lg transition-all duration-300 ease-in-out ${selectClass}`}
             />
           </div>
         </div>
@@ -160,7 +160,7 @@ function Transactions({ transactions, filter, setFilter, role, isDark, onAddTran
           <button
             type="button"
             onClick={() => setShowAddForm((prev) => !prev)}
-            className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-lg shadow-blue-500/20 transition-all duration-300 hover:scale-[1.02] hover:bg-blue-700 active:scale-[0.98]"
+            className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-lg shadow-blue-500/20 transition-all duration-300 ease-in-out hover:scale-[1.02] hover:bg-blue-700 hover:brightness-105 active:scale-95"
           >
             {showAddForm ? 'Close Form' : 'Add Transaction'}
           </button>
@@ -194,7 +194,7 @@ function Transactions({ transactions, filter, setFilter, role, isDark, onAddTran
               {sortedTransactions.map((transaction) => (
                 <tr
                   key={transaction.id}
-                  className={`transition-all duration-300 ${rowClass}`}
+                  className={`transition-all duration-300 ease-in-out ${rowClass}`}
                 >
                   <td className="px-3 py-3.5">{formatDate(transaction.date)}</td>
                   <td className="px-3 py-3.5">{transaction.category}</td>

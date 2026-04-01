@@ -71,7 +71,7 @@ function App() {
 
       <div className="relative z-10 mx-auto max-w-6xl space-y-5 sm:space-y-6">
         <header
-          className={`rounded-xl border p-5 shadow-lg backdrop-blur-lg transition-all duration-300 hover:scale-[1.02] sm:p-6 ${glassClass}`}
+          className={`rounded-xl border p-5 shadow-lg backdrop-blur-lg transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl sm:p-6 ${glassClass}`}
         >
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
@@ -87,7 +87,7 @@ function App() {
                 type="button"
                 onClick={() => setIsDark((prev) => !prev)}
                 aria-label="Toggle dark and light mode"
-                className={`rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${
+                className={`rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ease-in-out hover:scale-[1.02] hover:brightness-105 active:scale-95 ${
                   isDark
                     ? 'bg-slate-100 text-slate-900 hover:bg-white'
                     : 'bg-slate-900 text-white hover:bg-slate-700'
@@ -101,7 +101,7 @@ function App() {
         </header>
 
         <section
-          className={`rounded-xl border p-5 shadow-lg backdrop-blur-lg transition-all duration-300 hover:scale-[1.02] sm:p-6 ${glassClass}`}
+          className={`rounded-xl border p-5 shadow-lg backdrop-blur-lg transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl sm:p-6 ${glassClass}`}
         >
           <h2 className={`text-lg font-semibold ${headingClass}`}>
             Dashboard Overview

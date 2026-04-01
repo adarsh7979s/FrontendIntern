@@ -14,7 +14,7 @@ function RoleSwitcher({ role, onRoleChange, isDark }) {
         id="role"
         value={role}
         onChange={(event) => onRoleChange(event.target.value)}
-        className={`rounded-lg border px-3 py-2 text-sm shadow-lg outline-none backdrop-blur-lg transition-all duration-300 ${selectClass}`}
+        className={`rounded-lg border px-3 py-2 text-sm shadow-lg outline-none backdrop-blur-lg transition-all duration-300 ease-in-out ${selectClass}`}
       >
         <option value="viewer" className={optionClass}>
           Viewer
