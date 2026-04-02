@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import Charts from './components/Charts'
 import DashboardCards from './components/DashboardCards'
 import Insights from './components/Insights'
@@ -127,6 +128,7 @@ function App() {
 
         <Insights transactions={transactions} isDark={isDark} />
       </div>
+      <Analytics />
     </main>
   )
 }
